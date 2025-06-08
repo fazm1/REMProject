@@ -1,4 +1,4 @@
-import Progressbar from "../components/progressbar";
+import Progressbar from "../components/progressBar";
 
 export default function ProgressbarLayout({ children }) {
   return (
