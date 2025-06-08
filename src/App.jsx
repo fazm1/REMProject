@@ -1,13 +1,15 @@
-import { useState } from 'react'
-import SelectSkip from './pages/selectSkip';
+import { useState } from "react";
+import SelectSkip from "./pages/selectSkip";
+import ProgressbarLayout from "./layouts/progressbarLayout";
 
 function App() {
-
   return (
     <>
-      <SelectSkip />
+      <ProgressbarLayout>
+        <SelectSkip />
+      </ProgressbarLayout>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

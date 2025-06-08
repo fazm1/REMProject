@@ -1,7 +1,10 @@
 export default function SelectSkip() {
   return (
     <>
-      <h1>page</h1>
+      <div className="align-self-center">
+        <h1>Choose your skip size</h1> 
+        <p>Select the skip size the best suits your needs</p>
+      </div>
     </>
   );
 }

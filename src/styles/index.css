@@ -1,4 +1,12 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  --app-bg: #242424;
+  --app-text: rgba(255, 255, 255, 0.87);;
+
+  background-color: var(--app-bg);
+  color: var(--app-text)
 }
+
+
 
