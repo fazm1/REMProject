@@ -137,7 +137,7 @@ export default function SkipCarousel({
                       backgroundColor: !skip.allowed_on_road && "red",
                     }}
                   />
-                  {!skip.allowed_on_road
+                  {skip.allowed_on_road
                     ? "On-road allowed"
                     : "On-road not allowed"}
                 </div>
