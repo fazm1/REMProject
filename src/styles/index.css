@@ -1,12 +1,58 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* Font */
+  --font-main: system-ui, Avenir, Helvetica, Arial, sans-serif;
 
-  --app-bg: #242424;
-  --app-text: rgba(255, 255, 255, 0.87);;
+  /* Colors - Blue theme */
+ /* --app-bg: #242424;
+  --app-text: rgba(255, 255, 255, 0.87);
+  --primary: #2d7cff;
+  --primary-light: #7ec3ff;         
+  --secondary: #23242a;
+  --accent: #1e2230;
+  --footer-bg: #181a20;
+  --border: #23242a;
+  --muted-text: #7a7a8c;           
+  --card-bg: rgba(34, 38, 54, 0.55);
+  --card-glass: rgba(34, 38, 54, 0.45);
+  --badge-bg: linear-gradient(90deg, var(--primary) 60%, var(--primary-light) 100%);
+  --shadow-main: 0 2px 32px var(--primary-light)22;
+  --shadow-card: 0 8px 40px #0007, 0 2px 16px var(--primary-light)22;
+  --shadow-btn: 0 2px 16px var(--primary-light)33, 0 1px 4px #0005;
+  */
+  /* Colors */
+  --app-bg: #181a20;
+  --app-text: #f7f7f7;
+  --primary: #ffd600;          
+  --primary-light: #fff176;     
+  --secondary: #23242a;        
+  --muted-text: #b0b0c3;        
+  --accent: #23242a;           
+  --footer-bg: #1a1c22;
+  --border: #35363c;
+  --card-bg: #23242a;
+  --card-glass: rgba(35,36,42,0.85);
+  --badge-bg: #ffd600;
+  --shadow-main: 0 2px 32px #000a;
+  --shadow-card: 0 8px 40px #0007, 0 2px 16px #ffd60022;
+  --shadow-btn: 0 2px 16px #ffd60033, 0 1px 4px #0005;
 
-  background-color: var(--app-bg);
-  color: var(--app-text)
+  /* Sizes */
+  --carousel-gap: 40px;
+  --carousel-radius: 32px;
+  --carousel-padding: 32px;
+  --card-min-width: 340px;
+  --card-max-width: 370px;
+  --footer-height: 70px;
+
+  /* Z-index */
+  --z-footer: 10;
+  --z-carousel-btn: 100;
+  --z-carousel-indicator: 110;
 }
 
-
-
+html,
+body {
+  font-family: var(--font-main);
+  background-color: var(--app-bg);
+  color: var(--app-text);
+}

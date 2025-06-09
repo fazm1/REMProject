@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #181a20;
+  background: var(--footer-bg);
   padding: 24px 0;
   gap: 0;
 }
@@ -11,13 +11,13 @@
   display: flex;
   align-items: center;
   position: relative;
-  color: #7a7a8c;
+  color: var(--muted-text);
   font-size: 14px;
   font-weight: 500;
 }
 
 .progress-icon {
-  background: #23242a;
+  background: var(--secondary);
   border-radius: 50%;
   width: 36px;
   height: 36px;
@@ -40,15 +40,15 @@
 .progress-line {
   width: 48px;
   height: 2px;
-  background: #23242a;
+  background: var(--secondary);
   margin: 0 8px;
   border-radius: 1px;
 }
 
 .progress-step.completed .progress-icon {
-  background: #2d7cff;
+  background: var(--primary);
   color: #fff;
-  border-color: #2d7cff;
+  border-color: var(--primary);
 }
 
 .progress-step.completed .progress-label {
@@ -57,8 +57,8 @@
 
 .progress-step.active .progress-icon {
   background: #fff;
-  color: #2d7cff;
-  border-color: #2d7cff;
+  color: var(--primary);
+  border-color: var(--primary);
 }
 
 .progress-step.active .progress-label {
@@ -66,10 +66,10 @@
 }
 
 .progress-step:not(.completed):not(.active) .progress-icon {
-  background: #23242a;
-  color: #7a7a8c;
+  background: var(--secondary);
+  color: var(--muted-text);
 }
 
 .progress-step:not(.completed):not(.active) .progress-label {
-  color: #7a7a8c;
+  color: var(--muted-text);
 }

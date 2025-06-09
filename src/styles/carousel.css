@@ -13,17 +13,17 @@
 .skip-carousel {
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  gap: var(--carousel-gap, 40px);
   overflow-x: auto;
   width: 100vw;
   max-width: 100vw;
   scroll-snap-type: x mandatory;
   scrollbar-width: thin;
-  scrollbar-color: #2d7cff #23242a;
-  background: rgba(34, 38, 54, 0.45);
-  border-radius: 32px;
-  box-shadow: 0 2px 32px #2d7cff22;
-  padding: 32px 0 32px 0;
+  scrollbar-color: var(--primary) var(--secondary);
+  background: var(--card-glass);
+  border-radius: var(--carousel-radius, 32px);
+  box-shadow: var(--shadow-main, 0 2px 32px);
+  padding: var(--carousel-padding, 32px) 0;
   min-height: 440px;
   transition: box-shadow 0.2s;
   will-change: scroll-position;
@@ -32,17 +32,17 @@
 }
 .skip-carousel.dragging {
   user-select: none;
-  box-shadow: 0 4px 48px #2d7cff44;
+  box-shadow: 0 4px 48px var(--primary-light, #a7e0ff44);
 }
 .skip-carousel::-webkit-scrollbar {
   height: 10px;
 }
 .skip-carousel::-webkit-scrollbar-thumb {
-  background: #2d7cff;
+  background: var(--primary);
   border-radius: 8px;
 }
 .skip-carousel::-webkit-scrollbar-track {
-  background: #23242a;
+  background: var(--secondary);
 }
 
 /* Fixed carousel buttons */
@@ -50,8 +50,8 @@
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 100;
-  background: rgba(34, 38, 54, 0.95);
+  z-index: var(--z-carousel-btn, 100);
+  background: var(--secondary);
   border: none;
   cursor: pointer;
   padding: 0;
@@ -64,7 +64,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 16px #2d7cff33, 0 1px 4px #0005;
+  box-shadow: var(--shadow-btn, 0 2px 16px 0 1px 4px #0005);
 }
 .carousel-btn.left.fixed {
   left: 32px;
@@ -75,21 +75,21 @@
 .carousel-btn.fixed:hover,
 .carousel-btn.fixed:focus-visible {
   opacity: 1;
-  background: #2d7cff;
+  background: var(--primary);
   transform: translateY(-50%) scale(1.08);
 }
 .carousel-btn.fixed svg {
   display: block;
-  filter: drop-shadow(0 2px 8px #2d7cff55);
+  filter: drop-shadow(0 2px 8px var(--primary-light));
 }
 
 /* Glass Card */
 .skip-glass-card {
-  min-width: 340px;
-  max-width: 370px;
-  background: rgba(34, 38, 54, 0.55);
-  border-radius: 32px;
-  box-shadow: 0 8px 40px #0007, 0 2px 16px #2d7cff22;
+  min-width: var(--card-min-width, 340px);
+  max-width: var(--card-max-width, 370px);
+  background: var(--card-bg);
+  border-radius: var(--carousel-radius, 32px);
+  box-shadow: var(--shadow-card, 0 8px 40px #0007, 0 2px 16px);
   border: 2.5px solid transparent;
   backdrop-filter: blur(18px) saturate(1.4);
   -webkit-backdrop-filter: blur(18px) saturate(1.4);
@@ -105,34 +105,38 @@
   margin-top: 10px;
 }
 .skip-glass-card:hover,
-
 .skip-glass-card:focus-visible {
-  border: 2.5px solid #2d7cff;
-  box-shadow: 0 12px 48px #2d7cff44, 0 8px 40px #0007;
+  border: 2.5px solid var(--primary);
+  box-shadow: 0 12px 48px var(--primary-light), 0 8px 40px #0007;
   transform: translateY(-4px) scale(1.025);
 }
 .skip-glass-card.selected {
-  border: 2.5px solid #2d7cff;
-  box-shadow: 0 16px 56px #2d7cff77, 0 8px 40px #0007;
-  background: rgba(45, 124, 255, 0.13);
+  border: 2.5px solid var(--primary);
+  box-shadow: 0 16px 56px var(--primary-light), 0 8px 40px #0007;
+  background: var(--app-bg);
 }
 
 /* Image wrapper */
 .skip-glass-img-wrap {
   position: relative;
   background: rgba(24, 26, 32, 0.7);
-  border-radius: 32px 32px 0 0;
+  border-radius: var(--carousel-radius, 32px) var(--carousel-radius, 32px) 0 0;
   overflow: hidden;
-  padding: 38px 0 0 0;
+  padding: 20px 0 0 0;
   display: flex;
+
   justify-content: center;
   align-items: center;
   min-height: 180px;
 }
 .skip-glass-img {
   width: 90%;
-  max-width: 250px;
-  object-fit: contain;
+  max-width: 306px;
+  max-height: 187px;;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+
+  object-fit: cover;
   display: block;
   filter: drop-shadow(0 4px 18px #0008);
 }
@@ -142,13 +146,13 @@
   position: absolute;
   top: 26px;
   right: 32px;
-  background: linear-gradient(90deg, #2d7cff 60%, #a7e0ff 100%);
+  background: var(--badge-bg);
   color: #fff;
   font-size: 1.13rem;
   font-weight: 800;
   padding: 8px 22px;
   border-radius: 20px;
-  box-shadow: 0 2px 12px #2d7cff33;
+  box-shadow: 0 2px 12px var(--primary-light);
   letter-spacing: 0.5px;
   z-index: 2;
   opacity: 0.97;
@@ -163,7 +167,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  filter: drop-shadow(0 2px 8px #2d7cff99);
+  filter: drop-shadow(0 2px 8px var(--primary-light));
 }
 
 /* Card info */
@@ -194,12 +198,12 @@
   display: inline-block;
   width: 8px;
   height: 8px;
-  background: #2d7cff;
+  background: var(--primary);
   border-radius: 50%;
   margin-right: 6px;
 }
 .skip-glass-price {
-  color: #2d7cff;
+  color: var(--primary);
   font-size: 1.38rem;
   font-weight: 900;
   margin-bottom: 28px;
@@ -212,7 +216,7 @@
   padding: 16px 0;
   border-radius: 12px;
   border: none;
-  background: rgba(34, 38, 54, 0.7);
+  background: var(--secondary);
   color: #fff;
   font-size: 1.12rem;
   font-weight: 800;
@@ -221,19 +225,19 @@
   outline: none;
   border: 2px solid transparent;
   margin-top: auto;
-  box-shadow: 0 2px 12px #2d7cff22;
+  box-shadow: 0 2px 12px var(--primary-light);
   letter-spacing: 0.5px;
 }
 .skip-glass-btn.selected {
-  background: linear-gradient(90deg, #2d7cff 60%, #a7e0ff 100%);
+  background: var(--badge-bg);
   color: #fff;
-  border-color: #2d7cff;
+  border-color: var(--primary);
   cursor: default;
-  box-shadow: 0 2px 16px #2d7cff33;
+  box-shadow: 0 2px 16px var(--primary-light);
 }
 .skip-glass-btn:not(.selected):hover {
-  background: #2d7cff22;
-  color: #2d7cff;
+  background: var(--primary-light);
+  color: var(--secondary);
 }
 
 /* Responsive */
@@ -258,11 +262,11 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 12px; /* Place at the top */
+  top: 12px;
   display: flex;
   justify-content: center;
   gap: 10px;
-  z-index: 110;
+  z-index: var(--z-carousel-indicator, 110);
   pointer-events: none;
 }
 .carousel-indicator span {
@@ -275,7 +279,7 @@
   transition: background 0.2s, opacity 0.2s, transform 0.2s;
 }
 .carousel-indicator span.active {
-  background: #2d7cff;
+  background: var(--primary);
   opacity: 1;
   transform: scale(1.25);
 }

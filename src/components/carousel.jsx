@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import "../styles/carousel.css";
 
-const getSkipImage = (size) => `/images/skip-${size}.png`;
+const getSkipImage = (size) => `/images/skips/${size}-yarder-skip.jpg`;
 
 export default function SkipCarousel({  
   skipData,
@@ -69,7 +69,7 @@ export default function SkipCarousel({
           <polyline
             points="17,8 11,14 17,20"
             fill="none"
-            stroke="#2d7cff"
+            stroke="var(--primary)"
             strokeWidth="3"
             strokeLinecap="round"
           />
@@ -96,6 +96,7 @@ export default function SkipCarousel({
               <img
                 src={getSkipImage(skip.size)}
                 alt={`${skip.size} Yard Skip`}
+           
                 className="skip-glass-img"
                 loading="lazy"
               />
@@ -109,7 +110,7 @@ export default function SkipCarousel({
                       cx="19"
                       cy="19"
                       r="17"
-                      fill="#2d7cff"
+                      fill="var(--primary)"
                       opacity="0.8"
                     />
                     <polyline
@@ -155,7 +156,7 @@ export default function SkipCarousel({
           <polyline
             points="11,8 17,14 11,20"
             fill="none"
-            stroke="#2d7cff"
+            stroke="var(--primary)"
             strokeWidth="3"
             strokeLinecap="round"
           />
