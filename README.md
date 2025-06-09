@@ -1,6 +1,6 @@
-# REM Waste Project
+# REM Waste Project by Farid
 
-A modern React application for skip hire and waste management, featuring an elegant, responsive carousel for skip selection.
+A modern React application, featuring an elegant, responsive carousel for skip selection.
 
 ---
 
