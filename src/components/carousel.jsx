@@ -3,7 +3,7 @@ import "../styles/carousel.css";
 
 const getSkipImage = (size) => `/images/skips/${size}-yarder-skip.jpg`;
 
-export default function SkipCarousel({  
+export default function SkipCarousel({
   skipData,
   selectedSkip,
   setSelectedSkip,
@@ -96,7 +96,6 @@ export default function SkipCarousel({
               <img
                 src={getSkipImage(skip.size)}
                 alt={`${skip.size} Yard Skip`}
-           
                 className="skip-glass-img"
                 loading="lazy"
               />
@@ -126,10 +125,35 @@ export default function SkipCarousel({
             </div>
             <div className="skip-glass-info">
               <div className="skip-glass-title">{skip.size} Yard Skip</div>
-              <div className="skip-glass-period">
-                <span className="skip-glass-dot" /> {skip.hire_period_days} days
-                hire
+              <div className="skip-glass-details">
+                <div>
+                  <span className="skip-glass-dot" />
+                  {skip.hire_period_days} days hire
+                </div>
+                <div>
+                  <span
+                    className="skip-glass-dot"
+                    style={{
+                      backgroundColor: !skip.allowed_on_road && "red",
+                    }}
+                  />
+                  {!skip.allowed_on_road
+                    ? "On-road allowed"
+                    : "On-road not allowed"}
+                </div>
+                <div>
+                  <span
+                    className="skip-glass-dot"
+                    style={{
+                      backgroundColor: !skip.allows_heavy_waste && "red",
+                    }}
+                  />
+                  {skip.allows_heavy_waste
+                    ? "Heavy waste OK"
+                    : "No heavy waste"}
+                </div>
               </div>
+
               <div className="skip-glass-price">£{skip.price_before_vat}</div>
               <button
                 className={`skip-glass-btn${
@@ -139,7 +163,7 @@ export default function SkipCarousel({
                 aria-disabled={selectedSkip === skip.id}
                 type="button"
               >
-                {selectedSkip === skip.id ? "✓ Selected" : "Choose"}
+                {selectedSkip === skip.id ? "Selected" : "Choose"}
               </button>
             </div>
           </div>

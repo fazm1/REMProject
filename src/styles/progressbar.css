@@ -29,12 +29,14 @@
   color: inherit;
   border: 2px solid transparent;
   transition: border 0.2s, background 0.2s;
+  cursor: pointer;
 }
 
 .progress-label {
   margin-left: 8px;
   margin-right: 16px;
   color: inherit;
+  cursor: pointer;
 }
 
 .progress-line {
@@ -49,27 +51,33 @@
   background: var(--primary);
   color: #fff;
   border-color: var(--primary);
+  cursor: pointer;
 }
 
 .progress-step.completed .progress-label {
   color: #fff;
+  cursor: pointer;
 }
 
 .progress-step.active .progress-icon {
   background: #fff;
   color: var(--primary);
   border-color: var(--primary);
+  cursor: pointer;
 }
 
 .progress-step.active .progress-label {
   color: #fff;
+  cursor: pointer;
 }
 
-.progress-step:not(.completed):not(.active) .progress-icon {
+.progress-step:not(.completed):not(.active).disabled .progress-icon {
   background: var(--secondary);
   color: var(--muted-text);
+  cursor: not-allowed;
 }
 
-.progress-step:not(.completed):not(.active) .progress-label {
+.progress-step:not(.completed):not(.active).disabled .progress-label {
   color: var(--muted-text);
+  cursor: not-allowed;
 }

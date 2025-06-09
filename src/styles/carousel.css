@@ -7,6 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 /* Carousel */
@@ -21,7 +22,6 @@
   scrollbar-width: thin;
   scrollbar-color: var(--primary) var(--secondary);
   background: var(--card-glass);
-  border-radius: var(--carousel-radius, 32px);
   box-shadow: var(--shadow-main, 0 2px 32px);
   padding: var(--carousel-padding, 32px) 0;
   min-height: 440px;
@@ -30,10 +30,7 @@
   position: relative;
   align-items: stretch;
 }
-.skip-carousel.dragging {
-  user-select: none;
-  box-shadow: 0 4px 48px var(--primary-light, #a7e0ff44);
-}
+
 .skip-carousel::-webkit-scrollbar {
   height: 10px;
 }
@@ -104,6 +101,7 @@
   margin-bottom: 8px;
   margin-top: 10px;
 }
+
 .skip-glass-card:hover,
 .skip-glass-card:focus-visible {
   border: 2.5px solid var(--primary);
@@ -182,23 +180,24 @@
 .skip-glass-title {
   font-size: 1.25rem;
   font-weight: 800;
-  margin-bottom: 10px;
+  margin-bottom: 22px;
   color: #fff;
   letter-spacing: -0.5px;
 }
-.skip-glass-period {
+.skip-glass-details {
   color: #b0b0c3;
-  font-size: 1.07rem;
+  font-size: 1.20rem;
   margin-bottom: 22px;
   display: flex;
-  align-items: center;
-  gap: 8px;
+  flex-direction: column; 
+  align-items: flex-start;
+  gap: 6px; 
 }
 .skip-glass-dot {
   display: inline-block;
   width: 8px;
   height: 8px;
-  background: var(--primary);
+  background: greenyellow;
   border-radius: 50%;
   margin-right: 6px;
 }
@@ -219,7 +218,7 @@
   background: var(--secondary);
   color: #fff;
   font-size: 1.12rem;
-  font-weight: 800;
+  font-weight: 600;
   cursor: pointer;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
   outline: none;
