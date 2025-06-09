@@ -245,6 +245,7 @@
     min-height: 300px;
   }
   .skip-carousel {
+    margin-top: 40px;
     min-height: 300px;
     border-radius: 18px;
     padding: 18px 60px 18px 60px;

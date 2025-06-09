@@ -13,8 +13,8 @@ import { useBooking } from "../contexts/bookingContext";
 
 export default function Progressbar() {
   const steps = [
-  { label: "Postcode", icon: <FaMapMarkerAlt />, link: "/start" },
-  { label: "Waste Type", icon: <FaTrash />, link: "/start" },
+  { label: "Postcode", icon: <FaMapMarkerAlt />, link: "/" },
+  { label: "Waste Type", icon: <FaTrash />, link: "/" },
   { label: "Select Skip", icon: <FaTruck />, link: "/select-skip" },
   {
     label: "Permit Check",

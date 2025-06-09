@@ -26,7 +26,7 @@ export default function Footer() {
             className="skip-footer-btn back"
             onClick={() => {
               goToStep(currentStep - 1);
-              navigate("/start");
+              navigate("/");
             }}
           >
             Back

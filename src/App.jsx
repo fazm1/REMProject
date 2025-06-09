@@ -10,8 +10,8 @@ function App() {
     <>
       <BookingLayout>
         <Routes>
+          <Route path="/" element={<Start />} />
           <Route path="/select-skip" element={<SelectSkip />} />
-          <Route path="/start" element={<Start />} />
           <Route path="/end" element={<End />} />
         </Routes>
       </BookingLayout>
