@@ -7,7 +7,6 @@ import {
   FaCreditCard,
 } from "react-icons/fa";
 import "../styles/progressbar.css";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useBooking } from "../contexts/bookingContext";
 

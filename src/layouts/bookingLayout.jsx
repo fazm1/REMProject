@@ -3,7 +3,7 @@ import Footer from "../components/footer";
 import Progressbar from "../components/progressBar";
 import { useBooking } from "../contexts/bookingContext";
 
-export default function ProgressbarLayout({ children }) {
+export default function BookingLayout({ children }) {
   const { selectedSkip, currentStep } = useBooking();
   return (
     <>

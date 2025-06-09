@@ -81,3 +81,34 @@
   color: var(--muted-text);
   cursor: not-allowed;
 }
+
+@media (max-width: 1140px) {
+  .progressbar {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    padding: 16px 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) var(--footer-bg);
+    justify-content: flex-start;
+  }
+  .progress-step {
+    min-width: 140px;
+    flex: 0 0 auto;
+  }
+  .progress-line {
+    min-width: 32px;
+    width: 32px;
+    margin: 0 4px;
+  }
+  .progressbar::-webkit-scrollbar {
+    height: 8px;
+  }
+  .progressbar::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 4px;
+  }
+  .progressbar::-webkit-scrollbar-track {
+    background: var(--footer-bg);
+  }
+}
