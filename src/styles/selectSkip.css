@@ -1,190 +1,32 @@
-.selectskip-container {
-  background: #181a20;
+/* Outer container */
+.skip-select-outer {
   min-height: 100vh;
-  color: #fff;
-  padding: 32px 0 0 0;
+  width: 100vw;
+  background: linear-gradient(120deg, #1e2230 0%, #23242a 100%);
+  padding: 56px 0 140px 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-.selectskip-header {
+/* Header */
+.skip-select-header {
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 36px;
 }
-
-.selectskip-header h1 {
-  font-size: 2.2rem;
-  font-weight: 800;
-  margin-bottom: 8px;
-  letter-spacing: -1px;
+.skip-gradient-text {
+  background: linear-gradient(90deg, #2d7cff 30%, #a7e0ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 900;
+  font-size: 2.7rem;
+  letter-spacing: -1.5px;
 }
-
-.selectskip-subtitle {
-  color: #b0b0c3;
-  font-size: 1.08rem;
-  margin-top: 0;
-}
-
-.skip-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 36px;
-  width: 95%;
-  max-width: 1280px;
-  margin-bottom: 40px;
-}
-
-.skip-card {
-  background: #23242a;
-  border-radius: 18px;
-  box-shadow: 0 2px 16px #0003;
-  cursor: pointer;
-  border: 2px solid transparent;
-  transition: border 0.2s, box-shadow 0.2s, transform 0.15s;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  outline: none;
-  position: relative;
-}
-.skip-card:hover,
-.skip-card:focus-visible {
-  border: 2px solid #2d7cff;
-  box-shadow: 0 6px 32px #2d7cff33, 0 2px 16px #0003;
-  transform: translateY(-2px) scale(1.015);
-}
-
-.skip-card.selected {
-  border: 2.5px solid #2d7cff;
-  box-shadow: 0 8px 36px #2d7cff44, 0 2px 16px #0003;
-}
-
-.skip-image-wrapper {
-  position: relative;
-  background: #181a20;
-  border-radius: 18px 18px 0 0;
-  overflow: hidden;
-  padding: 28px 0 0 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 170px;
-}
-
-.skip-image {
-  width: 80%;
-  max-width: 220px;
-  object-fit: contain;
-  display: block;
-  filter: drop-shadow(0 2px 8px #0005);
-}
-
-.skip-size-badge {
-  position: absolute;
-  top: 16px;
-  right: 18px;
-  background: linear-gradient(90deg, #2d7cff 60%, #1e4fa3 100%);
-  color: #fff;
-  font-size: 1.02rem;
-  font-weight: 700;
-  padding: 5px 16px;
-  border-radius: 16px;
-  box-shadow: 0 2px 8px #0003;
-  letter-spacing: 0.5px;
-}
-
-.skip-selected-check {
-  position: absolute;
-  top: 16px;
-  left: 18px;
-  background: #2d7cff;
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: bold;
-  border-radius: 50%;
-  width: 28px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 8px #2d7cff55;
-  border: 2px solid #fff;
-  z-index: 2;
-}
-
-.skip-info {
-  padding: 22px 28px 28px 28px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.skip-title {
-  font-size: 1.18rem;
-  font-weight: 700;
-  margin-bottom: 4px;
-  letter-spacing: -0.5px;
-}
-
-.skip-hire {
-  color: #b0b0c3;
-  font-size: 1.01rem;
-  margin-bottom: 12px;
-}
-
-.skip-price {
-  color: #2d7cff;
-  font-size: 1.22rem;
-  font-weight: 700;
-  margin-bottom: 18px;
-}
-
-.skip-select-btn {
-  width: 100%;
-  padding: 13px 0;
-  border-radius: 8px;
-  border: none;
-  background: #23242a;
-  color: #fff;
-  font-size: 1.04rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-  outline: none;
-  border: 2px solid #23242a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 6px;
-}
-
-.skip-select-btn.selected {
-  background: #2d7cff;
-  color: #fff;
-  border-color: #2d7cff;
-  cursor: default;
-  box-shadow: 0 2px 12px #2d7cff33;
-}
-
-.skip-select-btn:not(.selected):hover {
-  background: #23242aee;
-  color: #2d7cff;
-}
-
-.arrow {
-  font-size: 1.2em;
-  margin-left: 4px;
-}
-
-@media (max-width: 700px) {
-  .skip-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    width: 98%;
-  }
-  .skip-info {
-    padding: 18px 12px 18px 12px;
-  }
+.skip-subtitle {
+  color: #e3e8f7;
+  font-size: 1.13rem;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.85;
 }

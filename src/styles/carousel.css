@@ -1,0 +1,281 @@
+/* Wrapper for fixed buttons and carousel */
+.carousel-fixed-wrapper {
+  position: relative;
+  width: 100vw;
+  max-width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Carousel */
+.skip-carousel {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  overflow-x: auto;
+  width: 100vw;
+  max-width: 100vw;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: #2d7cff #23242a;
+  background: rgba(34, 38, 54, 0.45);
+  border-radius: 32px;
+  box-shadow: 0 2px 32px #2d7cff22;
+  padding: 32px 0 32px 0;
+  min-height: 440px;
+  transition: box-shadow 0.2s;
+  will-change: scroll-position;
+  position: relative;
+  align-items: stretch;
+}
+.skip-carousel.dragging {
+  user-select: none;
+  box-shadow: 0 4px 48px #2d7cff44;
+}
+.skip-carousel::-webkit-scrollbar {
+  height: 10px;
+}
+.skip-carousel::-webkit-scrollbar-thumb {
+  background: #2d7cff;
+  border-radius: 8px;
+}
+.skip-carousel::-webkit-scrollbar-track {
+  background: #23242a;
+}
+
+/* Fixed carousel buttons */
+.carousel-btn.fixed {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  background: rgba(34, 38, 54, 0.95);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  opacity: 0.95;
+  transition: opacity 0.18s, transform 0.18s, background 0.18s;
+  outline: none;
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 16px #2d7cff33, 0 1px 4px #0005;
+}
+.carousel-btn.left.fixed {
+  left: 32px;
+}
+.carousel-btn.right.fixed {
+  right: 32px;
+}
+.carousel-btn.fixed:hover,
+.carousel-btn.fixed:focus-visible {
+  opacity: 1;
+  background: #2d7cff;
+  transform: translateY(-50%) scale(1.08);
+}
+.carousel-btn.fixed svg {
+  display: block;
+  filter: drop-shadow(0 2px 8px #2d7cff55);
+}
+
+/* Glass Card */
+.skip-glass-card {
+  min-width: 340px;
+  max-width: 370px;
+  background: rgba(34, 38, 54, 0.55);
+  border-radius: 32px;
+  box-shadow: 0 8px 40px #0007, 0 2px 16px #2d7cff22;
+  border: 2.5px solid transparent;
+  backdrop-filter: blur(18px) saturate(1.4);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  transition: border 0.22s, box-shadow 0.22s, transform 0.18s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  scroll-snap-align: center;
+  margin-bottom: 8px;
+  margin-top: 10px;
+}
+.skip-glass-card:hover,
+
+.skip-glass-card:focus-visible {
+  border: 2.5px solid #2d7cff;
+  box-shadow: 0 12px 48px #2d7cff44, 0 8px 40px #0007;
+  transform: translateY(-4px) scale(1.025);
+}
+.skip-glass-card.selected {
+  border: 2.5px solid #2d7cff;
+  box-shadow: 0 16px 56px #2d7cff77, 0 8px 40px #0007;
+  background: rgba(45, 124, 255, 0.13);
+}
+
+/* Image wrapper */
+.skip-glass-img-wrap {
+  position: relative;
+  background: rgba(24, 26, 32, 0.7);
+  border-radius: 32px 32px 0 0;
+  overflow: hidden;
+  padding: 38px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 180px;
+}
+.skip-glass-img {
+  width: 90%;
+  max-width: 250px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 4px 18px #0008);
+}
+
+/* Badge */
+.skip-glass-badge {
+  position: absolute;
+  top: 26px;
+  right: 32px;
+  background: linear-gradient(90deg, #2d7cff 60%, #a7e0ff 100%);
+  color: #fff;
+  font-size: 1.13rem;
+  font-weight: 800;
+  padding: 8px 22px;
+  border-radius: 20px;
+  box-shadow: 0 2px 12px #2d7cff33;
+  letter-spacing: 0.5px;
+  z-index: 2;
+  opacity: 0.97;
+}
+
+/* Checkmark overlay */
+.skip-glass-check {
+  position: absolute;
+  top: 26px;
+  left: 32px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 2px 8px #2d7cff99);
+}
+
+/* Card info */
+.skip-glass-info {
+  padding: 36px 36px 38px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  background: transparent;
+}
+.skip-glass-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+.skip-glass-period {
+  color: #b0b0c3;
+  font-size: 1.07rem;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.skip-glass-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #2d7cff;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+.skip-glass-price {
+  color: #2d7cff;
+  font-size: 1.38rem;
+  font-weight: 900;
+  margin-bottom: 28px;
+  letter-spacing: 0.5px;
+}
+
+/* Button */
+.skip-glass-btn {
+  width: 100%;
+  padding: 16px 0;
+  border-radius: 12px;
+  border: none;
+  background: rgba(34, 38, 54, 0.7);
+  color: #fff;
+  font-size: 1.12rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  outline: none;
+  border: 2px solid transparent;
+  margin-top: auto;
+  box-shadow: 0 2px 12px #2d7cff22;
+  letter-spacing: 0.5px;
+}
+.skip-glass-btn.selected {
+  background: linear-gradient(90deg, #2d7cff 60%, #a7e0ff 100%);
+  color: #fff;
+  border-color: #2d7cff;
+  cursor: default;
+  box-shadow: 0 2px 16px #2d7cff33;
+}
+.skip-glass-btn:not(.selected):hover {
+  background: #2d7cff22;
+  color: #2d7cff;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .carousel-fixed-wrapper {
+    min-height: 300px;
+  }
+  .skip-carousel {
+    min-height: 300px;
+    border-radius: 18px;
+    padding: 18px 60px 18px 60px;
+    gap: 18px;
+  }
+  .carousel-btn.fixed {
+    width: 38px;
+    height: 38px;
+    left: 8px;
+    right: 8px;
+  }
+}
+.carousel-indicator {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 12px; /* Place at the top */
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 110;
+  pointer-events: none;
+}
+.carousel-indicator span {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #b0b0c3;
+  opacity: 0.5;
+  transition: background 0.2s, opacity 0.2s, transform 0.2s;
+}
+.carousel-indicator span.active {
+  background: #2d7cff;
+  opacity: 1;
+  transform: scale(1.25);
+}

@@ -1,13 +1,14 @@
+import { useBooking } from '../contexts/bookingContext';
 import '../styles/footer.css'
-import skipData from '../data/skipData.json'
-
 export default function Footer() {
+      const { selectedSkipObj } = useBooking();
+
   return (
     <>
       <div className="skip-footer">
         <div>
           {(() => {
-            const s = skipData.find((s) => s.id === selected);
+            const s = selectedSkipObj;
             return s ? (
               <>
                 <span className="skip-footer-title">{s.size} Yard Skip</span>
