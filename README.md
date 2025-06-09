@@ -84,6 +84,9 @@ src/
 3. **Build for production:**  
    `npm run build`
 
+Alternatively you can check out the deployment sandbox version:
+https://remwasteprojectbyfarid.netlify.app/
+
 ---
 
 ## License
